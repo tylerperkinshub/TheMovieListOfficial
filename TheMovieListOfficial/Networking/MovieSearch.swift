@@ -11,11 +11,12 @@ import Alamofire
 
 class MovieSearch {
     
+    let serverKeys = ServerKeys()
     static let shared = MovieSearch()
     init () {}
     
     func searchMovie(completion: () -> Void) {
-        let request = Alamofire.request("https://api.themoviedb.org/3/search/movie?api_key=f691c008b316b96c5f83eae55b299bcb&language=en-US&query=The%20Godfather&page=1&include_adult=false").responseJSON { response in
+        let request = Alamofire.request("https://api.themoviedb.org/3/search/movie?api_key=\(serverKeys.movieDBAPIKey)&language=en-US&query=The%20Godfather&page=1&include_adult=false").responseJSON { response in
             
             let data = response.result.value as? [String : Any]
             print(data!)

@@ -11,11 +11,12 @@ import Alamofire
 
 class DataManagement {
 
+    let serverKeys = ServerKeys()
     static let shared = DataManagement()
     private init() {}
     
     func getMovie(completion: () -> Void) {
-        let request = Alamofire.request("https://api.themoviedb.org/3/movie/238?api_key=f691c008b316b96c5f83eae55b299bcb&language=en-US").responseJSON { response in
+        let request = Alamofire.request("https://api.themoviedb.org/3/movie/238?api_key=\(serverKeys.movieDBAPIKey)&language=en-US").responseJSON { response in
             
             let data = response.result.value as? [String : Any]
             //print(data)

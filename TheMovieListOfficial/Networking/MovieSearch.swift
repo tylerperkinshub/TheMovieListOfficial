@@ -15,14 +15,22 @@ class MovieSearch {
     static let shared = MovieSearch()
     init () {}
     
-    func searchMovie(completion: () -> Void) {
-        let request = Alamofire.request("https://api.themoviedb.org/3/search/movie?api_key=\(serverKeys.movieDBAPIKey)&language=en-US&query=The%20Godfather&page=1&include_adult=false").responseJSON { response in
+    func searchMovie(completion: @escaping (Movie?) -> Void) {
+        _ = Alamofire.request("https://api.themoviedb.org/3/movie/238?api_key=\(serverKeys.movieDBAPIKey)&language=en-US").responseJSON { response in
             
             let data = response.result.value as? [String : Any]
             print(data!)
             
-            let movie = Movie(data: data!)
-            print("Here is the movie title \(describing: movie?.title)")
+            if let movieData = data {
+                //DCS: Assemble your movie object, if its successful, we will get a filled out movie
+                //if it fails, we will return nill
+                if let movieObj = Movie(data: movieData) {
+                    completion(movieObj)
+                    print(movieObj)
+                } else {
+                    completion(nil)
+                }
+            }
         }
     }
     

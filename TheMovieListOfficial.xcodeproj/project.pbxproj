@@ -81,6 +81,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9648B4071F86BEEB00928B9E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		965F104C1F7C50EE0018DE3E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				965F10521F7C52720018DE3E /* Networking */,
+				9648B4071F86BEEB00928B9E /* Cells */,
 				965F104C1F7C50EE0018DE3E /* Controllers */,
 				965F104F1F7C51100018DE3E /* Models */,
 				96DE2C1C1F72F87700068485 /* Supporting Files */,

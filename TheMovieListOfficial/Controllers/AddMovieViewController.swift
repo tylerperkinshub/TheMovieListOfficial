@@ -9,6 +9,7 @@
 import UIKit
 
 class AddMovieViewController: UIViewController {
+    
     @IBOutlet weak var createListTextField: UITextField!
     
     override func viewDidLoad() {
@@ -23,16 +24,9 @@ class AddMovieViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func createListPressed(_ sender: Any) {
+        
     }
     
     

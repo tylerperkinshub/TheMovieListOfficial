@@ -14,9 +14,9 @@ private let reuseIdentifier = "Cell"
 
 class NewestCollectionViewController: UIViewController {
 
-    var currentUser = PFUser.current()
     
-    let movieSearch = MovieSearch()
+     var movieItem: Movie?
+    var currentUser = PFUser.current()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +26,11 @@ class NewestCollectionViewController: UIViewController {
             
         }
         
-        movieSearch.searchMovie() {
+        MovieSearch.shared.searchMovie { (movie) in
+            self.movieItem = movie
         }
+
         
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-
-        // Do any additional setup after loading the view.
     }
 
 

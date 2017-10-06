@@ -121,6 +121,9 @@
                                                         <segment title="Cast"/>
                                                         <segment title="Crew"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="castCrewPressed:" destination="EbJ-RW-D6F" eventType="valueChanged" id="Yab-mJ-md7"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -747,7 +750,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1du-M9-pub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340.80000000000001" y="-791.60419790104959"/>
+            <point key="canvasLocation" x="420" y="-792"/>
         </scene>
     </scenes>
     <resources>

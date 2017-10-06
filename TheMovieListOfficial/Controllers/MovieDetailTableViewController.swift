@@ -16,13 +16,9 @@ class MovieDetailTableViewController: UITableViewController {
     @IBOutlet weak var movieRuntime: UILabel!
     @IBOutlet weak var movieLogline: UILabel!
     @IBOutlet weak var movieOverview: UILabel!
+    
     @IBOutlet weak var actorName: UILabel!
     @IBOutlet weak var characterName: UILabel!
-    
-    
-    @IBAction func trailerPressed(_ sender: Any) {
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +43,13 @@ class MovieDetailTableViewController: UITableViewController {
         return 0
     }
 
-   
+    @IBAction func trailerPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func castCrewPressed(_ sender: Any) {
+        
+    }
+    
 
 }

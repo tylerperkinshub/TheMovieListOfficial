@@ -13,7 +13,6 @@ import Alamofire
 private let reuseIdentifier = "Cell"
 
 class NewestCollectionViewController: UIViewController {
-
     
      var movieItem: Movie?
     var currentUser = PFUser.current()
